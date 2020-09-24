@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto; 
+  padding-top: 3.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media screen and (min-width: 420px){
+}
+
+.headline {
+  font-family: 'Nunito', sans-serif;
+  font-size: 3.25em;
+  line-height: 1.2em;
+}
+
+.headline span {
+  color: tomato;
+}
+
+.sub-headline {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+  margin-top: 1em;
+}
+
+.sub-headline:not(:last-child) {
+  margin-top: 2em;
+}
+
+.underline {
+  background-image: linear-gradient(120deg, yellow 0%, orange 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 100%;
+  color: black;
+}
+
+.container {
+  padding-top: 5em;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.flex-outer {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  font-family: 'Nunito', sans-serif;
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  font-size: 1.1em;
+  padding: .5em;
+  font-weight: 500;
+  letter-spacing: .09em;
+  text-align: left;
+  color: grey;
+}
+
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + * {
+  flex: 1 0 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: .6em 1.4em;
+}
+
+.flex-outer li span {
+  color: tomato;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  font-weight: 700;
+  padding: 1.25em 4em;
+  border: none;
+  background: #d15333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+  letter-spacing: .25em;
+  border-bottom: 1px solid black;
+}
+
+.field-error {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  text-transform: uppercase;
+  color: tomato;
+  font-size: .75em;
+  letter-spacing: .3em;
+}
+
+.site-footer {
+  margin-top: 3em;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  height: 5em;
+  color: lightblue;
+}
+.thanks-page {
+  font-family: 'Nunito', sans-serif;
+}
