@@ -134,6 +134,11 @@ const BallotForm = () => {
           </li>
 
           <li>
+            <label htmlFor="selfie">Upload a selfie (optional)</label>
+            <input type="file" name="selfie" accept="image/png, image/jpeg"/>
+          </li>
+
+          <li>
             <button type="submit">Submit</button>
           </li>
         </ul>

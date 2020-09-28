@@ -1,22 +1,22 @@
 require('dotenv').config()
-  const querystring = require("querystring");
-  const phone = require("phone");
-  const {
-    TWILIO_ACCOUNT_SID,
-    TWILIO_AUTH_TOKEN,
-  } = process.env;
+const querystring = require("querystring");
+const phone = require("phone");
 
-console.log(TWILIO_ACCOUNT_SID.substring(0, 3))
-console.log(TWILIO_AUTH_TOKEN.substring(0, 3))
+const {
+  TWILIO_ACCOUNT_SID,
+  TWILIO_AUTH_TOKEN,
+} = process.env;
+
+// console.log(TWILIO_ACCOUNT_SID.substring(0, 3))
+// console.log(TWILIO_AUTH_TOKEN.substring(0, 3))
 
 exports.handler = function (event, context, callback) {
 
-  console.log('insantiating twilio client..')
   const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+
+  console.log(event.body)
   
-  console.log('parsing event body')
   const data = querystring.parse(event.body);
-  console.log(data)
   const phoneNumber = phone(data.mobile);
   const outgoingPhoneNumber = '+15108803280'
 
